@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolución Tecnológica: Almacenamiento Completo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto+Slab:wght@400;900&display=swap');
+
+        body {
+            background-color: #1a1a1a;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"), 
+                              linear-gradient(to bottom, #121212, #242424);
+            background-blend-mode: overlay;
+            font-family: 'Courier Prime', monospace;
+            color: #fff;
+        }
+
+        .title-font { font-family: 'Roboto Slab', serif; }
+        
+        .paper-strip {
+            background: #e5e5e5;
+            color: #333;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+            position: relative;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        .torn-circle {
+            mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='48' fill='black'/%3E%3Cpath d='M50 2 A48 48 0 0 1 50 98 A48 48 0 0 1 50 2' filter='url(%23rough)'/%3E%3Cfilter id='rough'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.05' numOctaves='2'/%3E%3CfeDisplacementMap in='SourceGraphic' scale='5'/%3E%3C/filter%3E%3C/svg%3E");
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='45'/%3E%3Cfilter id='f'%3E%3CfeTurbulence baseFrequency='0.1' numOctaves='3'/%3E%3CfeDisplacementMap scale='10'/%3E%3C/filter%3E%3C/svg%3E");
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            background-color: #cbd5e0;
+            border: 4px solid rgba(255,255,255,0.3);
+        }
+
+        .year-text {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #2d3748;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="py-12 px-4">
+    <div class="max-w-4xl mx-auto">
+        
+        <header class="text-center mb-16">
+            <h2 class="text-xl uppercase tracking-widest font-bold opacity-75">Unidad 4</h2>
+            <h1 class="title-font text-5xl md:text-7xl font-black uppercase border-b-4 border-white inline-block pb-2">Dispositivos de Almacenamiento</h1>
+        </header>
+
+        <!-- Bloque 1: HDD Magnético -->
+        <div class="paper-strip mb-12 p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-1 order-2 md:order-1 text-center md:text-left">
+                <div class="year-text mb-1">1956</div>
+                <h3 class="text-2xl font-bold mb-2 uppercase">Discos Duros (HDD)</h3>
+                <p class="text-sm leading-relaxed">
+                    Basados en tecnología magnética. Un HDD es una pila de platos que giran a alta velocidad (7200 rpm). Su estructura se define por cabezas, cilindros y sectores (CHS).
+                </p>
+            </div>
+            <div class="w-40 h-40 flex-shrink-0 order-1 md:order-2">
+                <div class="torn-circle w-full h-full flex items-center justify-center overflow-hidden">
+                    <span class="text-[10px] text-center p-4 text-zinc-800 uppercase font-bold"><img src="./hdd.png" alt="hdd"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloque 2: Floppy -->
+        <div class="paper-strip mb-12 p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+            <div class="w-40 h-40 flex-shrink-0">
+                <div class="torn-circle w-full h-full flex items-center justify-center overflow-hidden">
+                    <span class="text-[10px] text-center p-4 text-zinc-800 uppercase font-bold"><img src="./diquete.png" alt="disquete"></span>
+                </div>
+            </div>
+            <div class="flex-1 text-center md:text-right">
+                <div class="year-text mb-1">1971</div>
+                <h3 class="text-2xl font-bold mb-2 uppercase">Disquetes Flexibles</h3>
+                <p class="text-sm leading-relaxed">
+                    Película de Mylar impregnada de partículas magnéticas. Aunque hoy están en desuso por su baja capacidad (1.44 MB), fueron vitales para distribuir software y arrancar sistemas.
+                </p>
+            </div>
+        </div>
+
+        <!-- Bloque 3: Óptico -->
+        <div class="paper-strip mb-12 p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-1 order-2 md:order-1 text-center md:text-left">
+                <div class="year-text mb-1">1984</div>
+                <h3 class="text-2xl font-bold mb-2 uppercase">Unidades Ópticas</h3>
+                <p class="text-sm leading-relaxed">
+                    CD, DVD y Blu-Ray. Utilizan láseres para leer hoyos y llanos. El Blu-Ray (25-50 GB) usa láser azul-violeta, más fino que el rojo, permitiendo mayor densidad de datos.
+                </p>
+            </div>
+            <div class="w-40 h-40 flex-shrink-0 order-1 md:order-2">
+                <div class="torn-circle w-full h-full flex items-center justify-center overflow-hidden">
+                    <span class="text-[10px] text-center p-4 text-zinc-800 uppercase font-bold"><img src="./optica.png" alt="óptico"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloque 4: Memorias Flash -->
+        <div class="paper-strip mb-12 p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+            <div class="w-40 h-40 flex-shrink-0">
+                <div class="torn-circle w-full h-full flex items-center justify-center overflow-hidden">
+                    <span class="text-[10px] text-center p-4 text-zinc-800 uppercase font-bold"><img src="./flash.png" alt="flash"></span>
+                </div>
+            </div>
+            <div class="flex-1 text-center md:text-right">
+                <div class="year-text mb-1">1994</div>
+                <h3 class="text-2xl font-bold mb-2 uppercase">Memorias Flash</h3>
+                <p class="text-sm leading-relaxed">
+                    Tarjetas SD, CompactFlash y Pendrives. Dispositivos portátiles no volátiles (EEPROM). Muy resistentes a golpes y con bajo consumo, ideales para cámaras y móviles.
+                </p>
+            </div>
+        </div>
+
+        <!-- Bloque 5: Interfaces de Conexión -->
+        <div class="paper-strip mb-12 p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-1 order-2 md:order-1 text-center md:text-left">
+                <div class="year-text mb-1">2001</div>
+                <h3 class="text-2xl font-bold mb-2 uppercase">IDE vs SATA</h3>
+                <p class="text-sm leading-relaxed">
+                    El paso del cable plano PATA (40 pines, maestro/esclavo) al moderno SATA (serie, 7 hilos, sin jumpers). SATA permite mayores velocidades (hasta 6 Gb/s) y mejor flujo de aire.
+                </p>
+            </div>
+            <div class="w-40 h-40 flex-shrink-0 order-1 md:order-2">
+                <div class="torn-circle w-full h-full flex items-center justify-center overflow-hidden">
+                    <span class="text-[10px] text-center p-4 text-zinc-800 uppercase font-bold"><img src="./SATA.png" alt="sata"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloque 6: BIOS y Direccionamiento -->
+        <div class="paper-strip mb-12 p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+            <div class="w-40 h-40 flex-shrink-0">
+                <div class="torn-circle w-full h-full flex items-center justify-center overflow-hidden">
+                    <span class="text-[10px] text-center p-4 text-zinc-800 uppercase font-bold"><img src="./bios.png" alt="bios"></span>
+                </div>
+            </div>
+            <div class="flex-1 text-center md:text-right">
+                <h3 class="text-2xl font-bold mb-2 uppercase">BIOS e Interfaz Lógica</h3>
+                <p class="text-sm leading-relaxed">
+                    La BIOS detecta los discos automáticamente. El modo <b>LBA</b> (Logical Block Addressing) permitió superar el límite de 528 MB direccionando sectores secuencialmente.
+                </p>
+                <div class="text-sm mt-2 font-bold italic">SMART: Autodiagnóstico de errores.</div>
+            </div>
+        </div>
+
+        <!-- Bloque 7: Estado Sólido (SSD) -->
+        <div class="paper-strip mb-24 p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+            <div class="flex-1 order-2 md:order-1 text-center md:text-left">
+                <div class="year-text mb-1">HOY</div>
+                <h3 class="text-2xl font-bold mb-2 uppercase">Unidades SSD</h3>
+                <p class="text-sm leading-relaxed">
+                    Revolución silenciosa. Sin partes móviles, son más rápidos y consumen menos. Conexión vía SATA o PCI-Express. Son el estándar actual de alto rendimiento.
+                </p>
+            </div>
+            <div class="w-40 h-40 flex-shrink-0 order-1 md:order-2">
+                <div class="torn-circle w-full h-full flex items-center justify-center overflow-hidden">
+                    <span class="text-[10px] text-center p-4 text-zinc-800 uppercase font-bold"><img src="./SSD.png" alt="SSD"></span>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-center opacity-40 text-[10px] uppercase tracking-[0.3em] font-bold">
+            Memorias Secundarias • No Volátiles • Almacenamiento Masivo
+        </footer>
+
+    </div>
+</body>
+</html>
